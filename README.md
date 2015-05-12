@@ -1,2 +1,8 @@
 # dotfiles
-Custom configuration files (typically in the form of '.*') such as .zshrc and .vimrc
+This repository holds configuration files for my most commonly used systems.
+
+TODO:
+.vimrc
+.zshrc
+.zonkyrc
+.tmux.conf
