@@ -1,6 +1,6 @@
 syntax on
 set nocompatible
-set backspace=2
+set backspace=indent,eol,start
 set number
 set ruler
 set incsearch
