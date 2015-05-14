@@ -77,3 +77,15 @@ function ToggleTabs()
   endif
 endfunction
 nmap <F9> mz:execute ToggleTabs()<CR>'z
+
+" Toggle showing whitespace chars
+set nolist
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+function ToggleWhitespace()
+  if &list
+    set nolist
+  else
+    set list
+  endif
+endfunction
+nmap <F8> mz:execute ToggleWhitespace()<CR>'z
