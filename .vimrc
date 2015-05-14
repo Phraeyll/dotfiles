@@ -14,6 +14,8 @@ set pastetoggle=<F4>
 set clipboard=unnamedplus
 set nobackup
 set noswapfile
+set title
+set showmode
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 colorscheme delek
