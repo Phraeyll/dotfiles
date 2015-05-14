@@ -1,0 +1,87 @@
+background yes
+use_xft yes
+xftfont 123:size=12
+xftalpha 0.1
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 250 5
+maximum_width 400
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color gray
+default_shade_color red
+default_outline_color green
+alignment top_right
+gap_x 1930
+gap_y 10
+no_buffers no
+uppercase no
+cpu_avg_samples 1 
+net_avg_samples 1
+override_utf8_locale yes
+use_spacer left
+text_buffer_size 256
+
+
+
+TEXT
+
+# LOGO
+${font openlogos:size=20}${font Arial:size=20}${color blue}ARCH${color Ivory} LINUX${font openlogos:size=20}
+${time %Y-%m-%d}
+${time %H:%M:%S}
+${voffset -90}
+${color DimGray}
+${font}
+# System Info
+${font Arial:bold:size=10}${color Tan1}SYSTEM ${color DarkSlateGray} ${hr 2}
+$font${color DimGray}Hostname: $alignr ${nodename}
+sysname $kernel $alignr $machine
+CPU Freq. $alignr${freq_g cpu0}Ghz
+Uptime $alignr${uptime}
+Root FS $alignr${fs_type}
+# Disk
+${font Arial:bold:size=10}${color Tan1}DISK ${color DarkSlateGray}${hr 2}
+$font${color DimGray}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${fs_bar /}
+$font${color DimGray}/home $alignc ${fs_used /home} /home ${fs_size /home} $alignr ${fs_used_perc /home}%
+${fs_bar /home}
+# CPU
+${font Arial:bold:size=10}${color Tan1}CPU ${color DarkSlateGray}${hr 2}
+$font${color DimGray}CPU1  ${cpu cpu1}% ${cpubar cpu1}
+CPU2  ${cpu cpu2}% ${cpubar cpu2}
+CPU3  ${cpu cpu3}% ${cpubar cpu3}
+CPU4  ${cpu cpu4}% ${cpubar cpu4}
+# Memory
+${font Arial:bold:size=10}${color Tan1}MEMORY ${color DarkSlateGray}${hr 2}
+$font${color DimGray}RAM $alignc $mem / $memmax $alignr $memperc%
+$membar
+# Top CPU Processes
+${font Arial:bold:size=10}${color Tan1}TOP CPU ${color DarkSlateGray}${hr 2}
+${color DimGray}$font${top name 1}${alignr}${top mem 1} %
+$font${top name 2}${alignr}${top mem 2} %
+$font${top name 3}${alignr}${top mem 3} %
+$font${top name 4}${alignr}${top mem 4} %
+# Top Memory Processes
+${font Arial:bold:size=10}${color Tan1}TOP MEMORY ${color DarkSlateGray}${hr 2}
+${color DimGray}$font${top_mem name 1}${alignr}${top mem 1} %
+$font${top_mem name 2}${alignr}${top mem 2} %
+$font${top_mem name 3}${alignr}${top mem 3} %
+$font${top_mem name 4}${alignr}${top mem 4} %
+# Network
+${font Arial:bold:size=10}${color Tan2}NETWORK ${color DarkSlateGray}${hr 2}
+$font${color DimGray}wnet0 IP $alignr ${addr wnet0}
+Down: $alignr ${downspeed wnet0} Kb/s
+Up: $alignr ${upspeed wnet0} Kb/s
+Downloaded: $alignr  ${totaldown wnet0}
+Uploaded: $alignr  ${totalup wnet0}
+# Network Graph
+${color DimGray}${downspeedgraph wnet0 32,150 ff0000 0000ff} 
+${color DimGray}${upspeedgraph wnet0 32,150 0000ff ff0000}
