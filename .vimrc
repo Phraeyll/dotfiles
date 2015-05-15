@@ -19,9 +19,9 @@ set whichwrap+=<,>h,l,[,]
 " GUI Fonts
 if has ('gui_running')
   if has ('win32') || has ('win16')
-    set guifont=Consolas:h12
+    set guifont=Consolas:h14
   else
-    set guifont=DejaVu Sans Mono:h12
+    set guifont=DejaVu\ Sans\ Mono\ 14
   endif
 endif
 " Disable temp backup & swap files
