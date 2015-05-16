@@ -1,5 +1,6 @@
 " Basic Settings
 syntax on
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 colorscheme delek
 set nocompatible
 set number
@@ -81,11 +82,13 @@ nmap <F9> mz:execute ToggleTabs()<CR>'z
 " Toggle showing whitespace chars
 set nolist
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 function ToggleWhitespace()
   if &list
     set nolist
   else
     set list
+    match ExtraWhitespace /\s\+$\| \+\ze\t/
   endif
 endfunction
 nmap <F8> mz:execute ToggleWhitespace()<CR>'z
