@@ -63,14 +63,14 @@ else
   prompt_color=${local_prompt_color}
 fi
 # Git integration
-zstyle ':vcs_info:*' stagedstr 'M' 
-zstyle ':vcs_info:*' unstagedstr 'M' 
+zstyle ':vcs_info:*' stagedstr 'M'
+zstyle ':vcs_info:*' unstagedstr 'M'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
 zstyle ':vcs_info:*' formats \
   '%F{5}[%F{2}%b%F{5}] %F{2}%c%F{3}%u%f'
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-zstyle ':vcs_info:*' enable git 
+zstyle ':vcs_info:*' enable git
 +vi-git-untracked() {
   if [ $(git rev-parse --is-inside-work-tree 2> /dev/null) = 'true' ] && \
   [ $(git ls-files --other --directory --exclude-standard | sed q | wc -l | tr -d ' ') -eq 1 ] ; then
@@ -86,12 +86,6 @@ alias ls='ls --color'
 alias diff='colordiff'
 alias lsblka='lsblk -o NAME,TYPE,FSTYPE,LABEL,SIZE,UUID,MOUNTPOINT'
 
-# RVM scripts, path, and rvmsudo fix
-# [ -s "/usr/local/rvm/scripts/rvm" ] && source "/usr/local/rvm/scripts/rvm"
-# export rvmsudo_secure_path=0
-# export PATH="${PATH}:${HOME}/.rvm/bin" # Add RVM to PATH for scripting
-[ -s "${HOME}/.rvm/scripts/rvm" ] && source "${HOME}/.rvm/scripts/rvm"
-
 # Cleanup duplicates in $PATH
 # PATH=`echo -n $PATH | awk 'BEGIN { FS = ":" } { if (!arr[$0]++) { printf("%s%s",!ln++?"":":",$0) } }'`
 # export PATH
@@ -99,9 +93,10 @@ alias lsblka='lsblk -o NAME,TYPE,FSTYPE,LABEL,SIZE,UUID,MOUNTPOINT'
 # ZSH Syntax Highlighting Plugin
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
 # TMUX
 if which tmux >/dev/null 2>&1; then
-    #if not inside a tmux session, and if no session is started, start a new session
-    test -z "$TMUX" && (tmux attach || tmux new-session)
+  #if not inside a tmux session, and if no session is started, start a new session
+  test -z "$TMUX" && (tmux attach || tmux new-session)
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
