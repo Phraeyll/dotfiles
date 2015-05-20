@@ -86,6 +86,7 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 function ToggleWhitespace()
   if &list
     set nolist
+    match none
   else
     set list
     match ExtraWhitespace /\s\+$\| \+\ze\t/
