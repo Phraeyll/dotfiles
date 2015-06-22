@@ -65,10 +65,10 @@ $font${color DimGray}RAM $alignc $mem / $memmax $alignr $memperc%
 $membar
 # Top CPU Processes
 ${font Arial:bold:size=10}${color Tan1}TOP CPU ${color DarkSlateGray}${hr 2}
-${color DimGray}$font${top name 1}${alignr}${top mem 1} %
-$font${top name 2}${alignr}${top mem 2} %
-$font${top name 3}${alignr}${top mem 3} %
-$font${top name 4}${alignr}${top mem 4} %
+${color DimGray}$font${top name 1}${alignr}${top cpu 1} %
+$font${top name 2}${alignr}${top cpu 2} %
+$font${top name 3}${alignr}${top cpu 3} %
+$font${top name 4}${alignr}${top cpu 4} %
 # Top Memory Processes
 ${font Arial:bold:size=10}${color Tan1}TOP MEMORY ${color DarkSlateGray}${hr 2}
 ${color DimGray}$font${top_mem name 1}${alignr}${top mem 1} %
