@@ -1,7 +1,7 @@
 " Basic Settings
 syntax on
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-colorscheme delek
+colorscheme murphy
 set nocompatible
 set number
 set ruler
