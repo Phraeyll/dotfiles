@@ -292,45 +292,66 @@ URxvt*matcher.bUtton: 1
 ! Appearance
 URxvt*font: xft:DejaVu Sans Mono:size=14
 URxvt*boldFont: xft:DejaVu Sans Mono:size=14:style=Bold
-
 !  - Pseudo Transparency
 !URxvt*shading:    50
 !URxvt*transparent:true
-
-!  - Color Scheme
-URxvt*depth: 32
-URxvt*cursorColor: #DCDCCC
-URxvt*background: black
-URxvt*foreground: white
-! tangoesque scheme
-*background: #111111
-*foreground: #babdb6
-! Black (not tango) + DarkGrey
-*color0:  #000000
-*color8:  #555753
-! DarkRed + Red
-*color1:  #ff6565
-*color9:  #ff8d8d
-! DarkGreen + Green
-*color2:  #93d44f
-*color10: #c8e7a8
-! DarkYellow + Yellow
-*color3:  #eab93d
-*color11: #ffc123
-! DarkBlue + Blue
-*color4:  #204a87
-*color12: #3465a4
-! DarkMagenta + Magenta
-*color5:  #ce5c00
-*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-*color6:  #89b6e2
-*color14: #46a4ff
-! LightGrey + White
-*color7:  #cccccc
-*color15: #ffffff
 ! screen size/geometry
 URxvt*geometry: 160x40
-
 ! Scroll Wheel
 ! URxvt.perl-ext-common:  ...,vtwheel,...
+
+
+! --- special colors ---
+
+*background: #000000
+*foreground: #efefef
+
+! --- standard colors ---
+
+! black
+*color0: #000000
+
+! bright_black
+*color8: #3d3d3d
+
+! red
+*color1: #e1303b
+
+! bright_red
+*color9: #e1303b
+
+! green
+*color2: #3be130
+
+! bright_green
+*color10: #3be130
+
+! yellow
+*color3: #e1d630
+
+! bright_yellow
+*color11: #e1d630
+
+! blue
+*color4: #303be1
+
+! bright_blue
+*color12: #303be1
+
+! magenta
+*color5: #d630e1
+
+! bright_magenta
+*color13: #d630e1
+
+! cyan
+*color6: #30e1d6
+
+! bright_cyan
+*color14: #30e1d6
+
+! white
+*color7: #efefef
+
+! bright_white
+*color15: #ffffff
