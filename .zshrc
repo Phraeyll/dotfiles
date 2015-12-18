@@ -12,13 +12,18 @@ autoload -Uz compinit && compinit
 autoload -Uz vcs_info
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
+autoload -z edit-command-line
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
+zle -N edit-command-line
 zstyle ':completion:*' menu select
 
 # Map Ctrl+Arrows to move forward/backward by word
 bindkey '^[[1;5C' emacs-forward-word
 bindkey '^[[1;5D' emacs-backward-word
+
+# Ctrl+X+E to edit multiline history item
+bindkey "^X^E" edit-command-line
 
 # Automatically determine escape sequences (control codes) for easier key-binding
 typeset -A key
