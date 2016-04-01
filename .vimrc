@@ -18,25 +18,28 @@ set mouse=a
 set whichwrap+=<,>h,l,[,]
 
 " GUI Fonts
-if has ('gui_running')
-  if has ('win32') || has ('win16')
+if has('gui_running')
+  if has('win32') || has('win16')
     set guifont=Consolas:h14
   else
     set guifont=DejaVu\ Sans\ Mono\ 14
   endif
 endif
+
 " Disable temp backup & swap files
 set nobackup
 set noswapfile
 
 " Auto yank to clipboard
-if has ('win32') || has ('win16') || has('win32unix')
+if has('win32') || has('win16') || has('win32unix')
   set clipboard=unnamed
 else
   set clipboard=unnamedplus
 endif
+
 " Keep clipboard on exit
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
+
 " Paste without autoindent
 set pastetoggle=<F4>
 
@@ -54,8 +57,10 @@ set tabstop=8
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
 " Never expand tabs for makefiles regardless of filename
 autocmd FileType make setlocal noexpandtab
+
 " Toggle tabs & spacing
 function ToggleTabs()
   if &expandtab
