@@ -290,7 +290,7 @@ URxvt*urlLauncher: /usr/bin/google-chrome-stable
 URxvt*matcher.bUtton: 1
 
 ! Appearance
-URxvt*font: xft:DejaVu Sans Mono:size=14
+URxvt*font: xft:DejaVu Sans Mono:size=15
 URxvt*boldFont: xft:DejaVu Sans Mono:size=14:style=Bold
 !  - Pseudo Transparency
 !URxvt*shading:    50
