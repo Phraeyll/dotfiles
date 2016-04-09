@@ -1,7 +1,7 @@
 " Basic Settings
 syntax on
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-colorscheme murphy
+colorscheme delek
 set nocompatible
 set number
 set ruler
@@ -16,13 +16,18 @@ set showmode
 set autoindent
 set mouse=a
 set whichwrap+=<,>h,l,[,]
+set timeoutlen=1000
+set ttimeoutlen=0
+
+" Leader bindings
+let mapleader=" "
 
 " GUI Fonts
 if has('gui_running')
   if has('win32') || has('win16')
-    set guifont=Consolas:h14
+    set guifont=Consolas:h15
   else
-    set guifont=DejaVu\ Sans\ Mono\ 14
+    set guifont=DejaVu\ Sans\ Mono\ 15
   endif
 endif
 
@@ -58,8 +63,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-" Never expand tabs for makefiles regardless of filename
-autocmd FileType make setlocal noexpandtab
+" FileType expansions (eg. hard tab for .go files)
+autocmd FileType go setlocal shiftwidth=8 softtabstop=8 noexpandtab
 
 " Toggle tabs & spacing
 function ToggleTabs()
@@ -71,7 +76,7 @@ function ToggleTabs()
       echo 'Tabs = 2 spaces'
     else
       set shiftwidth=8
-      set softtabstop=0
+      set softtabstop=8
       set noexpandtab
       echo 'Tabs = tabs (8 wide)'
     endif
