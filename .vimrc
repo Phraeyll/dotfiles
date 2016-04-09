@@ -31,10 +31,6 @@ if has('gui_running')
   endif
 endif
 
-" Disable temp backup & swap files
-set nobackup
-set noswapfile
-
 " Auto yank to clipboard
 if has('win32') || has('win16') || has('win32unix')
   set clipboard=unnamed
