@@ -55,17 +55,6 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 # Setup prompt
-# Set prompt color to red when using SSH, yellow when local root, and green when local user
-if [ "${UID}" -eq 0 ]; then
-  local_prompt_color=yellow
-else
-  local_prompt_color=green
-fi
-if [ -n "${SSH_CLIENT}" ];then
-  prompt_color=red
-else
-  prompt_color=${local_prompt_color}
-fi
 # Git integration
 zstyle ':vcs_info:*' stagedstr 'M' 
 zstyle ':vcs_info:*' unstagedstr 'M' 
@@ -82,6 +71,19 @@ zstyle ':vcs_info:*' enable git
 fi
 }
 precmd () { vcs_info }
+
+# Set prompt color to red when using SSH, yellow when local root, and green when local user
+if [ "${UID}" -eq 0 ]; then
+  prompt_color=yellow
+else
+  prompt_color=green
+fi
+if [ -n "${SSH_CLIENT}" ];then
+  prompt_color=red
+fi
+# Prompt:
+# [ ~/current/directory ]
+# user@host $ 
 PROMPT='%F{cyan}[ %~ ]
 %F{$prompt_color}%n@%m ${vcs_info_msg_0_}%(!.#.$) %f'
 
@@ -89,9 +91,6 @@ PROMPT='%F{cyan}[ %~ ]
 if which tmux >/dev/null 2>&1; then
   test -z "$TMUX" && (tmux attach || tmux new-session)
 fi
-
-# ZSH Syntax Highlighting Plugin
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases
 alias ls='ls --color'
