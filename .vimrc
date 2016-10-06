@@ -69,6 +69,9 @@ set expandtab
 
 " FileType expansions (eg. hard tab for .go files)
 autocmd FileType go setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType make setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType c setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType py setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " Toggle tabs & spacing
 function ToggleTabs()
