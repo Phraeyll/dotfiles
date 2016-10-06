@@ -72,6 +72,7 @@ autocmd FileType go setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType make setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType c setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType py setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType ps1 setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " Toggle tabs & spacing
 function ToggleTabs()
