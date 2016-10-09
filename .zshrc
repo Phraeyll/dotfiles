@@ -12,7 +12,7 @@ autoload -Uz compinit && compinit
 autoload -Uz vcs_info
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
-autoload -z edit-command-line
+autoload -Uz edit-command-line
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 zle -N edit-command-line
@@ -56,17 +56,16 @@ fi
 
 # Setup prompt
 # Git integration
-zstyle ':vcs_info:*' stagedstr 'M' 
-zstyle ':vcs_info:*' unstagedstr 'M' 
+zstyle ':vcs_info:*' stagedstr 'M'
+zstyle ':vcs_info:*' unstagedstr 'M'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-zstyle ':vcs_info:*' formats \
-  '%F{5}[%F{2}%b%F{5}] %F{2}%c%F{3}%u%f'
+zstyle ':vcs_info:*' formats '%F{5}[%F{2}%b%F{5}] %F{2}%c%F{3}%u%f'
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-zstyle ':vcs_info:*' enable git 
+zstyle ':vcs_info:*' enable git
 +vi-git-untracked() {
   if [ $(git rev-parse --is-inside-work-tree 2> /dev/null) = 'true' ] && \
-  [ $(git ls-files --other --directory --exclude-standard | sed q | wc -l | tr -d ' ') -eq 1 ] ; then
+  [ $(git ls-files --other --directory --exclude-standard | sed q | wc -l | tr -d' ') -eq 1 ] ; then
   hook_com[unstaged]+='%F{1}??%f'
 fi
 }
@@ -83,7 +82,7 @@ if [ -n "${SSH_CLIENT}" ];then
 fi
 # Prompt:
 # [ ~/current/directory ]
-# user@host $ 
+# user@host $
 PROMPT='%F{cyan}[ %~ ]
 %F{$prompt_color}%n@%m ${vcs_info_msg_0_}%(!.#.$) %f'
 
