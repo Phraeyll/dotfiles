@@ -2,12 +2,17 @@
 This repository holds configuration files for my most commonly used systems.
 ---
 ## TODO:
-* .xbindkeysrc
+* ~~.xbindkeysrc~~
+  * Keybindings are specific to distro, and not necessary for most environments, ie, terminal only
 * Cleanup vimrc - possibly split into modular files and source them
-* ~Cleanup zshrc~
-* Read awesome man pages - Customize
-* Read urxvt man pages - Customize
-* Pimp conkyrc
+* ~~Cleanup zshrc~~
+  * Better - Can always be improved
+* ~~Read awesome man pages - Customize~~
+  * Back to XFCE for the forseeable future
+* ~~Read urxvt man pages - Customize~~
+  * Added keybindings and options I should need
+* ~~Pimp conkyrc~~
+  * Edited to my liking - may want to look at a way to have multiple styles
 
 ---
 ## .zshrc
