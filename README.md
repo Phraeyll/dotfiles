@@ -13,7 +13,6 @@ This repository holds configuration files for my most commonly used systems.
   * Added keybindings and options I should need
 * ~~Pimp conkyrc~~
   * Edited to my liking - may want to look at a way to have multiple styles
-
 ---
 ## .zshrc
 ### Misc Options (Sane Defaults)
@@ -22,6 +21,7 @@ This repository holds configuration files for my most commonly used systems.
 * Interactive Comments (typing "#" in interactive shell)
 * Disables Beep
 * Enables colors
+---
 ### Keybindings
 * Default eMacs Keybindings (ctrl + arrow keys, ctrl + a, ctrl +e, etc.) (haven't gotten used to vim mode in a shell)
 * Autodetect most keys for keybindings (arrow keys, delete, etc.)
@@ -29,6 +29,7 @@ This repository holds configuration files for my most commonly used systems.
 * Uses up/down arrow keys for searching history based on input
   * For example, "vim ~/.zsh" will bring up "vim ~/.zshrc" if found, rather than the last command typed
 * Edit multiline history, such as heredoc, with "ctrl +x +e"
+---
 ### PROMPT
 * Git integration using vcs_info, git rev-parse, and git ls-files
 * Prompt color based on UID & local vs ssh session
@@ -36,6 +37,7 @@ This repository holds configuration files for my most commonly used systems.
   * Green => Local user
   * RED => SSH (root || non-root)
     * May want to change to something like "orange" for ssh non-root
+---
 ### Aliases
 * Currently using GNU/Linux options for most commands
   * TODO => Change aliases to references environment variables, and use local zshenv to determine default for different distros
