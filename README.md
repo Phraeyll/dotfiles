@@ -17,6 +17,7 @@
   * Edited to my liking - may want to look at a way to have multiple styles
 
 ## .zshrc
+---
 
 ### Misc Options (Sane Defaults)
 * Default history filepath
@@ -44,4 +45,4 @@
 ### Aliases
 * Currently using GNU/Linux options for most commands
   * TODO => Change aliases to references environment variables, and use local zshenv to determine default for different distros
-    * Eg., alias ls='ls $MY_LS_COLOR_OPT' with MY_LS_COLOR_OPT set to "--color" on linux, and "-G" on FreeBSD (openbsd as well?); also lsblk is only available on linux - FreeBSD uses geom and openbsd uses something else I believe
+    * Eg., alias ls='ls $MY_LS_COLOR_OPT' with $MY_LS_COLOR_OPT set to "--color" on linux, and "-G" on FreeBSD (openbsd as well?); also lsblk is only available on linux - FreeBSD uses geom and openbsd uses something else I believe
