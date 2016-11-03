@@ -5,7 +5,7 @@ colorscheme delek
 set nocompatible
 set number
 set ruler
-set title
+set notitle
 set backspace=indent,eol,start
 set incsearch
 set wildmenu
