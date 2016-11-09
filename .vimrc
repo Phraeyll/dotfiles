@@ -67,6 +67,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Disable Auto comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " FileType expansions (eg. hard tab for .go files)
 autocmd FileType go setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType make setlocal shiftwidth=8 softtabstop=8 noexpandtab
