@@ -303,55 +303,55 @@ URxvt*geometry: 160x40
 
 ! --- special colors ---
 
-*background: #000000
-*foreground: #efefef
+URxvt*background: #000000
+URxvt*foreground: #efefef
 
 ! --- standard colors ---
 
 ! black
-*color0: #000000
+URxvt*color0: #000000
 
 ! bright_black
-*color8: #3d3d3d
+URxvt*color8: #3d3d3d
 
 ! red
-*color1: #e1303b
+URxvt*color1: #e1303b
 
 ! bright_red
-*color9: #e1303b
+URxvt*color9: #e1303b
 
 ! green
-*color2: #3be130
+URxvt*color2: #3be130
 
 ! bright_green
-*color10: #3be130
+URxvt*color10: #3be130
 
 ! yellow
-*color3: #e1d630
+URxvt*color3: #e1d630
 
 ! bright_yellow
-*color11: #e1d630
+URxvt*color11: #e1d630
 
 ! blue
-*color4: #303be1
+URxvt*color4: #303be1
 
 ! bright_blue
-*color12: #303be1
+URxvt*color12: #303be1
 
 ! magenta
-*color5: #d630e1
+URxvt*color5: #d630e1
 
 ! bright_magenta
-*color13: #d630e1
+URxvt*color13: #d630e1
 
 ! cyan
-*color6: #30e1d6
+URxvt*color6: #30e1d6
 
 ! bright_cyan
-*color14: #30e1d6
+URxvt*color14: #30e1d6
 
 ! white
-*color7: #efefef
+URxvt*color7: #efefef
 
 ! bright_white
-*color15: #ffffff
+URxvt*color15: #ffffff
