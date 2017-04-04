@@ -2,6 +2,7 @@
 syntax on
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 colorscheme delek
+set belloff=all
 set nocompatible
 set number
 set ruler
@@ -71,11 +72,13 @@ set expandtab
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " FileType expansions (eg. hard tab for .go files)
-autocmd FileType go setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType go   setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType make setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType c setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType py setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType ps1 setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType c    setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType y    setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType l    setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType py   setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType ps1  setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " Toggle tabs & spacing
 function ToggleTabs()
