@@ -75,11 +75,11 @@ $font${top_mem name 3}${alignr}${top mem 3} %
 $font${top_mem name 4}${alignr}${top mem 4} %
 # Network
 ${font Arial:bold:size=10}${color Tan2}NETWORK ${color DarkSlateGray}${hr 2}
-$font${color DimGray}wnet0 IP $alignr ${addr wnet0}
-Down: $alignr ${downspeed wnet0} Kb/s
-Up: $alignr ${upspeed wnet0} Kb/s
-Downloaded: $alignr  ${totaldown wnet0}
-Uploaded: $alignr  ${totalup wnet0}
+$font${color DimGray}net0 IP $alignr ${addr net0}
+Down: $alignr ${downspeed net0} Kb/s
+Up: $alignr ${upspeed net0} Kb/s
+Downloaded: $alignr  ${totaldown net0}
+Uploaded: $alignr  ${totalup net0}
 # Network Graph
-${color DimGray}${downspeedgraph wnet0 32,300 ff0000 0000ff} 
-${color DimGray}${upspeedgraph wnet0 32,300 0000ff ff0000}
+${color DimGray}${downspeedgraph net0 32,300 ff0000 0000ff} 
+${color DimGray}${upspeedgraph net0 32,300 0000ff ff0000}
