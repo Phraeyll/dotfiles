@@ -88,7 +88,7 @@ PROMPT='%F{cyan}[ %~ ]
 
 # TMUX (attach to existing session, or start new)
 if which tmux >/dev/null 2>&1; then
-  test -z "$TMUX" && (tmux attach || tmux new-session)
+  test -z "$TMUX" && (tmux attach -t DEFAULT || tmux new-session -s DEFAULT; echo $?)
 fi
 
 # Aliases
