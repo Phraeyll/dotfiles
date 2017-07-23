@@ -1,35 +1,51 @@
 " Basic Settings
-syntax on
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-colorscheme delek
-set belloff=all
-set nocompatible
 set number
 set ruler
 set notitle
+set autoindent
+set belloff=all
+set nocompatible
 set backspace=indent,eol,start
+set whichwrap+=<,>h,l,[,]
+set mouse=a
+syntax on " This actually implies filetype on
+filetype on
+filetype plugin on
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+colorscheme delek
+
+" Search settings
 set incsearch
 set wildmenu
 set wildmode=longest,list,full
 set hlsearch
 set showcmd
 set showmode
-set autoindent
-set mouse=a
-set whichwrap+=<,>h,l,[,]
+
+" Can't remember why these are needed
 set timeoutlen=1000
 set ttimeoutlen=0
 
-" Leader bindings
-let mapleader=" "
+" Disables tar Plugin
+let g:loaded_tarPlugin = 1
 
-" Split settings
-set splitbelow
-set splitright
-nnoremap <leader>j <C-W><C-J>
-nnoremap <leader>k <C-W><C-K>
-nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>h <C-W><C-H>
+" Disable Auto comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Default Tab Settings (overridden for certain filetypes later)
+set tabstop=8
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" :WQ & :Wq commands when forgetting sudo to edit file
+" want to add windows 'run as admin' functionality
+command W :execute 'silent w !sudo tee % > /dev/null' | :edit!
+command Wq :execute ':W' | :q
+command WQ :execute ':W' | :q
+
+" Keep clipboard on exit
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 " GUI Fonts
 if has('gui_running')
@@ -47,30 +63,6 @@ else
   set clipboard=unnamedplus
 endif
 
-" Keep clipboard on exit
-autocmd VimLeave * call system("xsel -ib", getreg('+'))
-
-" Paste without autoindent
-set pastetoggle=<F4>
-
-" :WQ & :Wq commands when forgetting sudo to edit file
-" want to add windows 'run as admin' functionality
-command W :execute 'silent w !sudo tee % > /dev/null' | :edit!
-command Wq :execute ':W' | :q
-command WQ :execute ':W' | :q
-
-" Disables tar Plugin
-let g:loaded_tarPlugin = 1
-
-" Tab Settings
-set tabstop=8
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-" Disable Auto comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 " FileType expansions (eg. hard tab for .go files)
 autocmd FileType go   setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType make setlocal shiftwidth=8 softtabstop=8 noexpandtab
@@ -79,6 +71,12 @@ autocmd FileType y    setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType l    setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType py   setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType ps1  setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType rs   setlocal shiftwidth=4 softtabstop=4 expandtab
+
+" Keybindings below
+
+" Paste without autoindent
+set pastetoggle=<F4>
 
 " Toggle tabs & spacing
 function ToggleTabs()
@@ -117,3 +115,16 @@ function ToggleWhitespace()
   endif
 endfunction
 nmap <F8> mz:execute ToggleWhitespace()<CR>'z
+
+" Leader bindings below
+
+" Leader binding
+let mapleader=" "
+
+" Split settings
+set splitbelow
+set splitright
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
