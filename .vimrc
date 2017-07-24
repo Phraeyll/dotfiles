@@ -8,9 +8,8 @@ set nocompatible
 set backspace=indent,eol,start
 set whichwrap+=<,>h,l,[,]
 set mouse=a
-syntax on " This actually implies filetype on
+syntax on
 filetype on
-filetype plugin on
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
 colorscheme delek
 
@@ -64,14 +63,18 @@ else
 endif
 
 " FileType expansions (eg. hard tab for .go files)
+" Hard tabs (8 spaces view)
+autocmd FileType c    setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType cpp  setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType yacc setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType lex  setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType go   setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType make setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType c    setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType y    setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType l    setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType py   setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType ps1  setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType rs   setlocal shiftwidth=4 softtabstop=4 expandtab
+
+" 4 soft spaces
+autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType ps1    setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType rust   setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " Keybindings below
 
