@@ -73,6 +73,7 @@ autocmd FileType make setlocal shiftwidth=8 softtabstop=8 noexpandtab
 
 " 4 soft spaces
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType julia setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType ps1    setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType rust   setlocal shiftwidth=4 softtabstop=4 expandtab
 

@@ -76,8 +76,8 @@ $font${top_mem name 4}${alignr}${top mem 4} %
 # Network
 ${font Arial:bold:size=10}${color Tan2}NETWORK ${color DarkSlateGray}${hr 2}
 $font${color DimGray}net0 IP $alignr ${addr net0}
-Down: $alignr ${downspeed net0} Kb/s
-Up: $alignr ${upspeed net0} Kb/s
+Down: $alignr ${downspeed net0} / s
+Up: $alignr ${upspeed net0} / s
 Downloaded: $alignr  ${totaldown net0}
 Uploaded: $alignr  ${totalup net0}
 # Network Graph
