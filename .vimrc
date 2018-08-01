@@ -10,8 +10,10 @@ set whichwrap+=<,>h,l,[,]
 set mouse=a
 syntax on
 filetype on
+
+" Colorscheme
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-colorscheme delek
+colorscheme one-dark
 
 " Search settings
 set incsearch
@@ -49,9 +51,10 @@ autocmd VimLeave * call system("xsel -ib", getreg('+'))
 " GUI Fonts
 if has('gui_running')
   if has('win32') || has('win16')
-    set guifont=Consolas:h15
+    " set guifont=Consolas:h16
+    set guifont=DejaVu_Sans_Mono:h16:cANSI
   else
-    set guifont=DejaVu\ Sans\ Mono\ 15
+    set guifont=DejaVu\ Sans\ Mono\ 16
   endif
 endif
 
