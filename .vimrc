@@ -57,6 +57,7 @@ if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ 16
   endif
 endif
+set encoding=utf-8
 
 " Auto yank to clipboard
 if has('win32') || has('win16') || has('win32unix')
