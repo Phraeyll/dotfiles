@@ -6,7 +6,7 @@ set autoindent
 set belloff=all
 set nocompatible
 set backspace=indent,eol,start
-set whichwrap+=<,>h,l,[,]
+set whichwrap+=<,>,h,l,[,]
 set mouse=a
 syntax on
 filetype on
