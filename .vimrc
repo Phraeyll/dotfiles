@@ -13,7 +13,7 @@ filetype on
 
 " Colorscheme
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
-colorscheme one-dark
+" colorscheme one-dark
 
 " Search settings
 set incsearch
