@@ -35,8 +35,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Default Tab Settings (overridden for certain filetypes later)
 set tabstop=8
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " :WQ & :Wq commands when forgetting sudo to edit file
@@ -74,12 +74,6 @@ autocmd FileType yacc setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType lex  setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType go   setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType make setlocal shiftwidth=8 softtabstop=8 noexpandtab
-
-" 4 soft spaces
-autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType julia setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType ps1    setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType rust   setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " Keybindings below
 
